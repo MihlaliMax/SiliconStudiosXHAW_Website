@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewing Course - Empowering the Nation</title>
+    <link rel="stylesheet" href="/Six month courses/styles.css"> <!-- Corrected CSS file path -->
+</head>
+<body>
+    <header>
+        <div class="logo">Empowering the Nation</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Six-Week Courses</a>
+                    <div class="dropdown-content">
+                        <a href="../Six week courses/childMinding.html">Child Minding</a>
+                        <a href="../Six week courses/cooking.html">Cooking</a>
+                        <a href="../Six week courses/gardenMaintenance.html">Garden Maintenance</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">Six-Month Courses</a>
+                    <div class="dropdown-content">
+                        <a href="../Six month courses/firstAid.html">First Aid</a>
+                        <a href="../Six month courses/sewing.html">Sewing</a>
+                        <a href="../Six month courses/landscaping.html">Landscaping</a>
+                        <a href="../Six month courses/lifeSkills.html">Life Skills</a>
+                    </div>
+                </li>
+                <li><a href="../calculateFees.html">Calculate Fees</a></li>
+                <li><a href="../contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Back button -->
+        <button class="back-button" onclick="goBack()">&#8592; Back</button>
+
+        <div class="content">
+            <h1>Sewing Course</h1>
+            <p>Unlock your creativity and learn essential <strong>sewing skills</strong> with our comprehensive sewing course designed for beginners and experienced sewists.</p>
+
+            <h2>Benefits</h2>
+            <ul>
+                <li><strong>Hands-on Practice:</strong> Gain practical experience with various sewing techniques.</li>
+                <li><strong>Certified Training:</strong> Receive a certificate upon successful completion of the course.</li>
+                <li><strong>Expert Instructors:</strong> Learn from experienced seamstresses and tailors.</li>
+            </ul>
+
+            <h2>Course Curriculum</h2>
+            <ul>
+                <li><strong>Module 1: Basic Sewing Techniques</strong> - Learn essential stitches and sewing machine operation.</li>
+                <li><strong>Module 2: Pattern Making</strong> - Understand how to read and create sewing patterns.</li>
+                <li><strong>Module 3: Project Sewing</strong> - Complete a sewing project of your choice, such as a garment or home decor item.</li>
+            </ul>
+
+            <div class="course-info">
+                <div class="info-card">
+                    <h3>Course Fee</h3>
+                    <p>R1500</p>
+                    <h3>Duration</h3>
+                    <p>6 months</p>
+                    <button class="register-now-btn">Register Now</button>
+                </div>
+
+                <div class="info-card">
+                    <div class="instructor">
+                        <h4>Instructor:</h4>
+                        <h3>Ms. Anna Smith</h3>
+                        <p>10 years of experience in fashion design and sewing instruction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow -->
+        <div class="video">
+            <section class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="../_images/sewing1.jpg" style="width:100%" alt="Hands-on sewing practice">
+                    <div class="text">Hands-on sewing practice</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="../_images/sewing2.jpg" style="width:100%" alt="Creating sewing patterns">
+                    <div class="text">Creating sewing patterns</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="../_images/sewing3.jpg" style="width:100%" alt="Completed sewing projects">
+                    <div class="text">Completed sewing projects</div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </section>
+
+            <!-- Slide dots for navigation -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+    </footer>
+
+    <script src="/Six month courses/script.js"></script> 
+</body>
+</html>

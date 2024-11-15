@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+        }
+
+        header nav {
+            position: relative;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            position: relative;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #ffffff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        header input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Main Section */
+        .main-section {
+            padding: 30px;
+            max-width: 1500px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-category {
+            margin-bottom: 40px;
+        }
+
+        .course-category h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+            color: #343a40;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .course-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-card h3 {
+            margin: 10px 0;
+            font-size: 1.8em;
+            color: #007bff;
+        }
+
+        .course-card p {
+            margin: 10px 0;
+            color: #6c757d;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Empowering the Nation</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Six-Week Courses</a>
+                    <div class="dropdown-content">
+                        <a href="childMinding.html">Child Minding</a>
+                        <a href="cooking.html">Cooking</a>
+                        <a href="gardenMaintenance.html">Garden Maintenance</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">Six-Month Courses</a>
+                    <div class="dropdown-content">
+                        <a href="firstAid.html">First Aid</a>
+                        <a href="sewing.html">Sewing</a>
+                        <a href="landscaping.html">Landscaping</a>
+                        <a href="lifeSkills.html">Life Skills</a>
+                    </div>
+                </li>
+                <li><a href="calculateFees.html">Calculate Fees</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><input type="text" id="searchInput" placeholder="Search for a course..." onkeyup="searchCourses()"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-section">
+        <section class="course-category">
+            <h2>Six-Week Courses</h2>
+            <p>Explore our comprehensive six-week courses designed to empower you with practical skills.</p>
+            <div class="course-list">
+                <div class="course-card">
+                    <h3>Child Minding</h3>
+                    <p>Learn essential skills for caring for children, including safety, nutrition, and engaging activities.</p>
+                    <p><strong>Duration:</strong> 6 weeks</p>
+                    <p><strong>Start Date:</strong> Monthly</p>
+                    <a href="childMinding.html" class="button">View Course</a>
+                </div>
+                <div class="course-card">
+                    <h3>Cooking</h3>
+                    <p>Master basic cooking techniques and explore various cuisines while preparing delicious meals.</p>
+                    <p><strong>Duration:</strong> 6 weeks</p>
+                    <p><strong>Start Date:</strong> Monthly</p>
+                    <a href="cooking.html" class="button">View Course</a>
+                </div>
+                <div class="course-card">
+                    <h3>Garden Maintenance</h3>
+                    <p>Understand the fundamentals of garden care, including plant selection, pruning, and seasonal upkeep.</p>
+                    <p><strong>Duration:</strong> 6 weeks</p>
+                    <p><strong>Start Date:</strong> Monthly</p>
+                    <a href="gardenMaintenance.html" class="button">View Course</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-category">
+            <h2>Six-Month Courses</h2>
+<p>Explore our comprehensive six-month courses designed to empower you with practical skills.</p>
+
+            <div class="course-list">
+                <div class="course-card">
+                    <h3>First Aid</h3>
+                    <p>Gain vital first aid skills to respond to emergencies and provide care until professional help arrives.</p>
+                    <p><strong>Duration:</strong> 6 months</p>
+                    <p><strong>Start Date:</strong> Bi-monthly</p>
+                    <a href="firstAid.html" class="button">View Course</a>
+                </div>
+                <div class="course-card">
+                    <h3>Sewing</h3>
+                    <p>Learn sewing techniques and create your own projects, from basic repairs to custom garments.</p>
+                    <p><strong>Duration:</strong> 6 months</p>
+                    <p><strong>Start Date:</strong> Bi-monthly</p>
+                    <a href="sewing.html" class="button">View Course</a>
+                </div>
+                <div class="course-card">
+                    <h3>Landscaping</h3>
+                    <p>Explore landscaping principles and design beautiful outdoor spaces using plants, hardscaping, and maintenance techniques.</p>
+                    <p><strong>Duration:</strong> 6 months</p>
+                    <p><strong>Start Date:</strong> Bi-monthly</p>
+                    <a href="landscaping.html" class="button">View Course</a>
+                </div>
+                <div class="course-card">
+                    <h3>Life Skills</h3>
+                    <p>Develop essential life skills, including financial literacy, time management, and effective communication.</p>
+                    <p><strong>Duration:</strong> 6 months</p>
+                    <p><strong>Start Date:</strong> Bi-monthly</p>
+                    <a href="lifeSkills.html" class="button">View Course</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+        <p>Contact us: info@empoweringthenation.com</p>
+    </footer>
+
+    <script>
+        function searchCourses() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const courseCards = document.querySelectorAll('.course-card');
+
+            courseCards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                if (title.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

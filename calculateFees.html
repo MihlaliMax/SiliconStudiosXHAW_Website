@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering the Nation</title>
+    
+    <style>
+ /* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+}
+
+header input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+        section {
+            padding: 10px;
+            margin: 0 auto;
+            background-size: cover;
+            background-position: center;
+          
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+           
+        
+        }
+
+        h2 {
+            color: #0077b6;
+            font-size: 36px; /* Increase font size for better readability */
+        }
+
+        .course-list label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        input[type="submit"], button {
+            padding: 15px 30px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover, button:hover {
+            background-color: #023e8a;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color:  #e0f7fa;
+            border: 1px solid #0077b6;
+            font-size: 18px;
+        }
+
+        .modules {
+            margin-top: 20px;
+            display: none;
+            background-color: #e0f7fa;
+            padding: 20px;
+            border: 1px solid #0077b6;
+        }
+
+        .modules h3 {
+            color: #0077b6;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                width: 100%; /* Use the full width of the screen */
+            }
+            
+        }
+
+        /* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">Empowering the Nation</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a  class="dropbtn">Six-Week Courses</a>
+                    <div class="dropdown-content">
+                        <a href="childMinding.html">Child Minding</a>
+                        <a href="cooking.html">Cooking</a>
+                        <a href="gardenMaintenance.html">Garden Maintenance</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a  class="dropbtn">Six-Month Courses</a>
+                    <div class="dropdown-content">
+                        <a href="firstAid.html">First Aid</a>
+                        <a href="sewing.html">Sewing</a>
+                        <a href="landscaping.html">Landscaping</a>
+                        <a href="lifeSkills.html">Life Skills</a>
+                    </div>
+                </li>
+                <li><a href="calculateFees.html">Calculate Fees</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section>
+        <h2>Select Your Course(s)</h2>
+        <p>Customers can select from a range of courses. The more courses you select, the more discount you receive!</p>
+        <p>• One course: no discount <br>
+           • Two courses: 5% discount <br>
+           • Three courses: 10% discount <br>
+           • More than three courses: 15% discount
+        </p>
+
+        <form id="courseForm">
+            <h3>Six-Month Courses</h3>
+            <div class="course-list">
+                <label><input type="checkbox" name="course" value="1500" data-course-name="First Aid" id="firstAidCheckbox" onclick="toggleModules('firstAidModules')"> First Aid - R1500</label>
+                <label><input type="checkbox" name="course" value="1500" data-course-name="Sewing" id="sewingCheckbox" onclick="toggleModules('sewingModules')"> Sewing - R1500</label>
+                <label><input type="checkbox" name="course" value="1500" data-course-name="Landscaping" id="landscapingCheckbox" onclick="toggleModules('landscapingModules')"> Landscaping - R1500</label>
+                <label><input type="checkbox" name="course" value="1500" data-course-name="Life Skills" id="lifeSkillsCheckbox" onclick="toggleModules('lifeSkillsModules')"> Life Skills - R1500</label>
+            </div>
+
+            <!-- First Aid Modules -->
+            <div class="modules" id="firstAidModules">
+                <h3>Purpose</h3>
+                <p>To provide first aid awareness and basic life support.</p>
+                <h3>Content</h3>
+                <ul>
+                    <li>Wounds and bleeding</li>
+                    <li>Burns and fractures</li>
+                    <li>Emergency scene management</li>
+                    <li>Cardio-Pulmonary Resuscitation (CPR)</li>
+                    <li>Respiratory distress e.g., Choking, blocked airway</li>
+                </ul>
+            </div>
+
+            <!-- Sewing Modules -->
+            <div class="modules" id="sewingModules">
+                <h3>Purpose</h3>
+                <p>To provide alterations and new garment tailoring services.</p>
+                <h3>Content</h3>
+                <ul>
+                    <li>Types of stitches</li>
+                    <li>Threading a sewing machine</li>
+                    <li>Sewing buttons, zips, hems and seams</li>
+                    <li>Alterations</li>
+                    <li>Designing and sewing new garments</li>
+                </ul>
+            </div>
+
+            <!-- Landscaping Modules -->
+            <div class="modules" id="landscapingModules">
+                <h3>Purpose</h3>
+                <p>To provide landscaping services for new and established gardens.</p>
+                <h3>Content</h3>
+                <ul>
+                    <li>Indigenous and exotic plants and trees</li>
+                    <li>Fixed structures (fountains, statues, benches, tables, built-in braai)</li>
+                    <li>Balancing of plants and trees in a garden</li>
+                    <li>Aesthetics of plant shapes and colors</li>
+                    <li>Garden layout</li>
+                </ul>
+            </div>
+
+            <!-- Life Skills Modules -->
+            <div class="modules" id="lifeSkillsModules">
+                <h3>Purpose</h3>
+                <p>To provide skills to navigate basic life necessities.</p>
+                <h3>Content</h3>
+                
+                <ul>
+                    <li>Opening a bank account</li>
+                    <li>Basic labour law (know your rights)</li>
+                    <li>Basic reading and writing literacy</li>
+                    <li>Basic numeric literacy</li>
+                </ul>
+            </div>
+            
+
+        <!-- Six-Week Courses -->
+<h3>Six-Week Courses</h3>
+<div class="course-list">
+    <label><input type="checkbox" name="course" value="750" data-course-name="Child Minding" id="childMindingCheckbox" onclick="toggleModules('childMindingModules')"> Child Minding - R750</label>
+    <label><input type="checkbox" name="course" value="750" data-course-name="Cooking" id="cookingCheckbox" onclick="toggleModules('cookingModules')"> Cooking - R750</label>
+    <label><input type="checkbox" name="course" value="750" data-course-name="Garden Maintenance" id="gardenMaintenanceCheckbox" onclick="toggleModules('gardenMaintenanceModules')"> Garden Maintenance - R750</label>
+</div>
+
+<!-- Child Minding Modules -->
+<div class="modules" id="childMindingModules">
+    <h3>Purpose</h3>
+    <p>To provide basic child and baby care.</p>
+    <h3>Content</h3>
+    <ul>
+        <li>Birth to six-month old baby needs</li>
+        <li>Seven-month to one-year old needs</li>
+        <li>Toddler needs</li>
+        <li>Educational toys</li>
+    </ul>
+</div>
+
+<!-- Cooking Modules -->
+<div class="modules" id="cookingModules">
+    <h3>Purpose</h3>
+    <p>To prepare and cook nutritious family meals.</p>
+    <h3>Content</h3>
+    <ul>
+        <li>Nutritional requirements for a healthy body</li>
+        <li>Types of protein, carbohydrates, and vegetables</li>
+        <li>Planning meals</li>
+        <li>Preparation and cooking of meals</li>
+    </ul>
+</div>
+
+<!-- Garden Maintenance Modules -->
+<div class="modules" id="gardenMaintenanceModules">
+    <h3>Purpose</h3>
+    <p>To provide basic knowledge of watering, pruning, and planting in a domestic garden.</p>
+    <h3>Content</h3>
+    <ul>
+        <li>Water restrictions and the watering requirements of indigenous and exotic plants</li>
+        <li>Pruning and propagation of plants</li>
+        <li>Planting techniques for different plant types</li>
+    </ul>
+</div>
+
+
+            
+
+            <h3>Your Contact Information</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="button" onclick="calculateTotal()">Calculate Total Fees</button>
+
+            <div class="result" id="result"></div>
+        </form>
+
+        
+    </section>
+
+    <script>
+        function toggleModules(moduleId) {
+            const moduleDiv = document.getElementById(moduleId);
+            const checkbox = document.querySelector(`input[id="${moduleId.replace('Modules', 'Checkbox')}"]`);
+    
+            if (checkbox.checked) {
+                moduleDiv.style.display = 'block';
+            } else {
+                moduleDiv.style.display = 'none';
+            }
+        }
+    
+        function calculateTotal() {
+            const selectedCheckboxes = document.querySelectorAll('input[name="course"]:checked');
+            const selectedCoursesCount = selectedCheckboxes.length;
+            const VAT_RATE = 0.15;
+            let totalAmount = 0;
+    
+            // Calculate total fee based on selected courses
+            selectedCheckboxes.forEach(checkbox => {
+                const courseValue = parseInt(checkbox.value);
+                if (!isNaN(courseValue)) {
+                    totalAmount += courseValue;
+                }
+            });
+    
+            // Apply discounts based on the number of courses selected
+            let discount = 0;
+            if (selectedCoursesCount === 2) {
+                discount = 0.05;
+            } else if (selectedCoursesCount === 3) {
+                discount = 0.10;
+            } else if (selectedCoursesCount > 3) {
+                discount = 0.15;
+            }
+    
+            const discountAmount = totalAmount * discount;
+            const discountedAmount = totalAmount - discountAmount;
+    
+            // Calculate VAT
+            const vatAmount = discountedAmount * VAT_RATE;
+            const finalTotal = discountedAmount + vatAmount;
+    
+            // Display the result
+            document.getElementById('result').innerHTML = `
+                <p>Total Courses Selected: ${selectedCoursesCount}</p>
+                <p>Discount Applied: ${(discount * 100).toFixed(0)}%</p>
+                <p>Subtotal: R${discountedAmount.toFixed(2)}</p>
+                <p>VAT (15%): R${vatAmount.toFixed(2)}</p>
+                <h3>Total Amount: R${finalTotal.toFixed(2)}</h3>
+            `;
+        }
+        
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscaping Course - Empowering the Nation</title>
+    <link rel="stylesheet" href="/Six month courses/styles.css"> <!-- Corrected CSS file path -->
+</head>
+<body>
+    <header>
+        <div class="logo">Empowering the Nation</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Six-Week Courses</a>
+                    <div class="dropdown-content">
+                        <a href="../Six week courses/childMinding.html">Child Minding</a>
+                        <a href="../Six week courses/cooking.html">Cooking</a>
+                        <a href="../Six week courses/gardenMaintenance.html">Garden Maintenance</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">Six-Month Courses</a>
+                    <div class="dropdown-content">
+                        <a href="../Six month courses/firstAid.html">First Aid</a>
+                        <a href="../Six month courses/sewing.html">Sewing</a>
+                        <a href="../Six month courses/landscaping.html">Landscaping</a>
+                        <a href="../Six month courses/lifeSkills.html">Life Skills</a>
+                    </div>
+                </li>
+                <li><a href="../calculateFees.html">Calculate Fees</a></li>
+                <li><a href="../contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Back button -->
+        <button class="back-button" onclick="goBack()">&#8592; Back</button>
+
+        <div class="content">
+            <h1>Landscaping Course</h1>
+            <p>Enhance your <strong>skills in landscaping</strong> and create stunning outdoor spaces with our comprehensive training.</p>
+
+            <h2>Benefits</h2>
+            <ul>
+                <li><strong>Hands-on Practice:</strong> Learn through real-world landscaping projects.</li>
+                <li><strong>Certified Training:</strong> Receive a certificate upon successful completion.</li>
+                <li><strong>Expert Instructors:</strong> Get trained by experienced landscaping professionals.</li>
+            </ul>
+
+            <h2>Course Curriculum</h2>
+            <ul>
+                <li><strong>Module 1: Garden Design</strong> - Learn how to design aesthetically pleasing and functional gardens.</li>
+                <li><strong>Module 2: Plant Knowledge</strong> - Understand the use of indigenous and exotic plants in landscaping.</li>
+                <li><strong>Module 3: Landscaping Structures</strong> - Learn to incorporate features like fountains, benches, and patios.</li>
+            </ul>
+
+            <div class="course-info">
+                <div class="info-card">
+                    <h3>Course Fee</h3>
+                    <p>R1500</p>
+                    <h3>Duration</h3>
+                    <p>6 months</p>
+                    <button class="register-now-btn">Register Now</button>
+                </div>
+
+                <div class="info-card">
+                    <div class="instructor">
+                        <h4>Instructor:</h4>
+                        <h3>Mr. John Doe</h3>
+                        <p>20 years of experience in landscape architecture and garden design, certified landscaping expert.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow -->
+        <div class="video">
+            <section class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="../_images/landscaping1.jpg" style="width:100%" alt="Landscaping project in progress">
+                    <div class="text">Landscaping project in progress</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="../_images/landscaping2.jpg" style="width:100%" alt="Expert guidance from Landscaping instructors">
+                    <div class="text">Expert guidance</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="../_images/landscaping3.jpg" style="width:100%" alt="Students working on a garden design">
+                    <div class="text">Students working on a garden design</div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </section>
+
+            <!-- Slide dots for navigation -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+    </footer>
+
+    <script src="/Six month courses/script.js"></script> 
+</body>
+</html>
